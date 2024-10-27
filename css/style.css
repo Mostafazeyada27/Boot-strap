@@ -1,0 +1,126 @@
+/* start General styling */
+:root {
+  --main-color: #ff206a;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s all;
+}
+.icon:hover {
+  border-color: var(--main-color) !important;
+}
+.icon i {
+  transition: 0.5s all;
+}
+.icon:hover i {
+  color: var(--main-color);
+}
+
+.heading h2 {
+  opacity: 0.5;
+  letter-spacing: 20px;
+  font-size: 5rem;
+}
+.heading h3::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+/* End General styling */
+/* Start Navbar */
+
+nav .navbar-nav .nav-link.active,
+nav.navbar-nav .nav-link.show {
+  color: var(--main-color);
+  position: relative;
+}
+nav .nav-link {
+  color: white;
+  text-align: center;
+}
+nav .navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: var(--main-color);
+  left: 0;
+  bottom: 0;
+}
+/* End Navbar */
+/* start Header */
+header {
+  background-image: url(../images/bg_osaka.jpg);
+  background-position: center;
+  background-size: cover;
+}
+header .content .view {
+  color: var(--main-color);
+}
+/* end Header */
+/* start About */
+#about {
+  background: url(../images/light_dot.jpg) center;
+}
+/* End About */
+
+/* start service */
+#service {
+  background: url(../images/dark_dot.j) center;
+}
+#service .inner-icon {
+  width: 40px;
+  height: 40px;
+}
+#service .inner {
+  cursor: pointer;
+}
+#service .inner .line::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s all;
+}
+#service .inner:hover .line::after {
+  width: 50%;
+}
+/* End service */
+
+/* Start Slider */
+.carousel-indicators [data-bs-target] {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff206a;
+  text-indent: 0;
+}
+/* End Slider */
+
+/* Start Tabs */
+
+#tabs .nav-tabs {
+  border-bottom: none !important;
+}
+/* End Tabs */
+
+@media (min-width: 600px) {
+  .heading h2 {
+    letter-spacing: 10px;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  #slider .carousel-item .inner {
+    width: 100% !important;
+  }
+}
